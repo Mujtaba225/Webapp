@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 
 def main():
     st.title('Dropdown')
-    data = pd.read_csv(r'C:\Users\SRC\CDA/SMS_data.csv',encoding='unicode_escape')
+    data = pd.read_csv('SMS_data.csv',encoding='unicode_escape')
     label = st.selectbox("Label",list(data['Label'].unique()))
     st.table(data[data['Label']==label])
     #st.table(data)
